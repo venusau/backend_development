@@ -17,5 +17,5 @@ app.get("/login", (req, res)=>{
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Serving the app at http://localhost:${port}`)
 })
