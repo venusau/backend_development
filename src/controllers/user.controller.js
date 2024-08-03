@@ -181,7 +181,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
       incomingRefreshToken,
       process.env.REFRESH_TOKEN_SECRET
     );
-    const user = await User.findById(decodedToken.userId);
+    const user = await User.findById(decodedToken._id);
     if (!user) {
       throw new ApiError(401, "User not found");
     }
